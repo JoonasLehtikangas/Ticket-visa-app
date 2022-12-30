@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {
+	QueryClient,
+	QueryClientProvider,
+	useQuery,
+} from '@tanstack/react-query';
+import React, { useEffect, useState } from 'react';
+import './App.scss';
+import MainPage from './MainPage';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App: React.FC = () => {
+	// const [countries, setCountries] = useState<[]>([]);
+	// const CountryFlags = async () => {
+	// 	const response = await fetch('https://restcountries.com/v3.1/all');
+	// 	const data = await response.json();
+	// 	setCountries(data);
+	// };
+	// useEffect(() => {
+	// 	CountryFlags();
+	// 	console.log(countries);
+	// }, []);
+
+	// get data with React Query
+
+	return (
+		<div className='App'>
+			<MainPage />
+		</div>
+	);
+};
 
 export default App;

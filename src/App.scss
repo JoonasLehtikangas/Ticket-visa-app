@@ -1,0 +1,55 @@
+html,
+body,
+#root,
+#root > div {
+	height: 100%;
+	padding: 1em;
+	background-color: black;
+	color: blue;
+}
+
+.header {
+	margin: auto;
+}
+.content {
+	display: flex;
+	.stuff {
+		display: flex;
+		width: 80%;
+		text-align: center;
+		flex-direction: column;
+		.game {
+			display: flex;
+			margin-top: 1em;
+			flex-direction: column;
+			.game-title {
+				display: flex;
+				justify-content: center;
+				margin-bottom: 1em;
+			}
+			.flags {
+				display: flex;
+				padding: 1em;
+				flex-wrap: wrap;
+				place-content: center;
+				.country {
+					display: flex;
+					padding: 1em;
+					flex-direction: column;
+					width: 40%;
+					.revealed {
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+	.left {
+		width: 20%;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		height: 100vh;
+		background-color: gray;
+	}
+}
